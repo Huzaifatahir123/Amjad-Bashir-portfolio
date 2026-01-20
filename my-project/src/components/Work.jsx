@@ -74,7 +74,7 @@ const Work = () => {
           initial="hidden"
           whileInView="visible"
           transition={{ ease: easeInOut, duration: 0.6 }}
-          className="flex flex-wrap gap-6 justify-center"
+          className="flex flex-wrap max-sm:flex-col gap-6 justify-center"
         >
           {skillsData.map((skill, index) => (
             <motion.div
