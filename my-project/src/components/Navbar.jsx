@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import assets from "../assets/assets";
+import { Menu,X } from "lucide-react";
 import { motion, easeInOut, AnimatePresence } from "framer-motion";
 import { parent, fadeInUp, revealeffect } from "../animations/navanimation";
 
@@ -101,13 +102,13 @@ const Navbar = ({ theme, settheme }) => {
           </motion.a>
 
           {/* Mobile Menu Icon */}
-          <motion.img
+          <Menu
             variants={revealeffect}
             initial="initial"
             whileInView="visible"
             transition={{ duration: 1 }}
             onClick={() => setside(true)}
-            src={theme ? assets.menu_white : assets.menu_black}
+            
             className="w-8 sm:hidden cursor-pointer"
             alt="menu"
           />
@@ -129,8 +130,8 @@ const Navbar = ({ theme, settheme }) => {
                        text-gray-800 dark:text-gray-100"
           >
             {/* Close */}
-            <img
-              src={theme ? assets.close_white : assets.close_black}
+            <X
+              
               onClick={() => setside(false)}
               className="absolute top-6 right-6 w-8 cursor-pointer"
               alt="close"

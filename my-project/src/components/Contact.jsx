@@ -97,7 +97,7 @@ const ContactUs = () => {
           <motion.button
             type="submit"
             variants={fadeInUp}
-            className="px-6 py-4 bg-black text-white font-semibold rounded-xl dark:bg-white/80 dark:text-black hover:scale-105 transition-transform duration-300 ease-in-out"
+            className="px-6 py-4 bg-white text-black  font-semibold rounded-xl dark:bg-white/80 dark:text-black hover:scale-105 transition-transform duration-300 ease-in-out"
           >
             {result}
           </motion.button>

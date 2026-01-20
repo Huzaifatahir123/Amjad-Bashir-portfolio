@@ -9,8 +9,8 @@ const Hero = ({theme,settheme}) => {
       <h1 className='sm:text-4xl max-sm:text-center text-3xl  font-bold'> Senior Accounts & Finance Professional Based In Pakistan</h1>
       <p className='text-center'>I am a Senior Accounts & Finance Professional <br /> based in pakistan have a experience of 15+ years</p>
       <div className='flex gap-4'>
-        <a target='_blanck' href='https://www.linkedin.com/in/amjad-bashir-863571159' className='hover:text-white hover:bg-black sm:px-6 sm:py-4 p-4 dark:hover:bg-white dark:hover:text-black duration-200  border-1 rounded-4xl flex justify-center items-center gap-1 max-sm:text-sm  '>Connect With me <LinkedinIcon/></a>
-        <a href={assets.Cv} download="AMJAD BASHIR CV.pdf"className=' dark:hover:bg-white dark:hover:text-black duration-200  sm:px-6 sm:py-4 p-4 border-1  rounded-4xl  flex  gap-2 justify-center items-center cursor-pointer hover:text-white hover:bg-black'>my resume <DownloadIcon/></a>
+        <a target='_blanck' href='https://www.linkedin.com/in/amjad-bashir-863571159' className='hover:text-white hover:bg-black sm:px-6 sm:py-4 p-4 text-xs dark:hover:bg-white dark:hover:text-black duration-200  border-1 rounded-4xl sm:rounded-4xl flex justify-center items-center gap-1 max-sm:text-xs  '>Connect<LinkedinIcon className='max-sm:w-4'/></a>
+        <a href={assets.Cv} download="AMJAD BASHIR CV.pdf"className=' dark:hover:bg-white dark:hover:text-black duration-200  sm:px-6 sm:py-4 p-4 border-1  rounded-4xl  flex  gap-2 justify-center items-center cursor-pointer hover:text-white hover:bg-black'>my resume <DownloadIcon className='w-6'/></a>
       </div>
     </div>
   )
