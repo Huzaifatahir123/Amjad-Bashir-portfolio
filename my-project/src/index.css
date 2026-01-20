@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@custom-variant dark {
+  &:where(.dark, .dark *) {
+    @slot;
+  }
+};
+@theme {
+  --color-primary: #242424;
+  --color-dark: #11001F;
+  --color-text: #F3F3F3;
+
+  --font-grotesk: "Space Grotesk", ;
+  --font-manrope: "Manrope", ;
+}
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
