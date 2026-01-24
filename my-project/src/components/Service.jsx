@@ -68,7 +68,7 @@ const Service = () => {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className='max-w-md flex-1 backdrop-blur-md bg-dark dark:bg-white/20 border border-white/30 rounded-2xl shadow-lg p-6 flex flex-col gap-4 hover:scale-[1.03] transition-transform duration-300 ease-in-out'
+              className='max-w-md flex-1  bg-dark dark:bg-white/20 border border-white/30 rounded-2xl shadow-lg p-6 flex flex-col gap-4 '
             >
               <h1 className='text-2xl sm:text-3xl font-semibold text-white'>{exp.title}</h1>
               <p className='text-sm text-gray-200 italic'>{exp.company} | {exp.duration}</p>

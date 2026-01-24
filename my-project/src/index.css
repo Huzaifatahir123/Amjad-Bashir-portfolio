@@ -18,3 +18,6 @@ body {
 html {
   scroll-behavior: smooth;
 }
+.input-dark {
+  @apply p-4 rounded-lg bg-[#1c1c1c] border border-white/10 text-white outline-none focus:border-secondary;
+}

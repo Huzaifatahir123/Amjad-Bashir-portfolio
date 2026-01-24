@@ -22,11 +22,11 @@ const About = () => {
 
         {/* Content Card */}
         <div
-          className="max-w-4xl mx-auto backdrop-blur-xl 
+          className="max-w-4xl mx-auto 
                       bg-dark dark:bg-white/10 text-white
                      border border-white/20
                      rounded-3xl
-                     shadow-[0_8px_32px_rgba(0,0,0,0.25)]
+                     
                      px-6 sm:px-10 py-10"
         >
           <p className="text-base sm:text-lg leading-relaxed dark:text-gray-100">

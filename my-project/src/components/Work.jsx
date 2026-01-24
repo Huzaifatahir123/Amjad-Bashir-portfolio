@@ -70,11 +70,11 @@ const Work = () => {
           {skillsData.map((skill, index) => (
             <div
               key={index}
-              className="max-w-md flex-1 backdrop-blur-xl bg-dark dark:bg-white/10 
+              className="max-w-md flex-1  bg-dark dark:bg-white/10 
                          border border-white/20 rounded-2xl 
-                         shadow-[0_8px_32px_rgba(0,0,0,0.2)]
+                         
                          p-6 sm:p-8 flex flex-col gap-5
-                         hover:scale-[1.03] transition-all duration-300 ease-in-out"
+                        "
             >
               <div className="flex justify-between">
                 <h2 className="text-2xl sm:text-3xl font-semibold text-white">

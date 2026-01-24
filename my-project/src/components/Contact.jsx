@@ -52,14 +52,14 @@ const ContactUs = () => {
       <div className="flex justify-center">
         <form
           onSubmit={onSubmit}
-          className="flex flex-col gap-6 w-full max-w-2xl backdrop-blur-md bg-dark dark:bg-white/20 border border-white/30 rounded-3xl p-10 shadow-lg hover:shadow-fuchsia-400 transition-shadow duration-300"
+          className="flex flex-col gap-6 w-full max-w-2xl  bg-dark dark:bg-white/20 border border-white/30 rounded-3xl p-10"
         >
           {/* Name */}
           <input
             type="text"
             name="name"
             placeholder="Name"
-            className="p-4 rounded-lg outline-none border border-white/30 bg-white/10 text-white placeholder-gray-200 focus:border-secondary focus:ring-1 focus:ring-secondary transition-all duration-300"
+            className="p-4 rounded-lg outline-none border border-white/30 bg-white/10 text-white placeholder-gray-200 "
             required
           />
 
@@ -68,7 +68,7 @@ const ContactUs = () => {
             type="email"
             name="email"
             placeholder="Email"
-            className="p-4 rounded-lg outline-none border border-white/30 bg-white/10 text-white placeholder-gray-200 focus:border-secondary focus:ring-1 focus:ring-secondary transition-all duration-300"
+            className="p-4 rounded-lg outline-none border border-white/30 bg-white/10 text-white placeholder-gray-200 "
             required
           />
 
@@ -77,14 +77,14 @@ const ContactUs = () => {
             name="message"
             placeholder="Type your message"
             rows={6}
-            className="p-4 rounded-lg outline-none border border-white/30 bg-white/10 text-white placeholder-gray-200 focus:border-secondary focus:ring-1 focus:ring-secondary transition-all duration-300 resize-none"
+            className="p-4 rounded-lg outline-none border border-white/30 bg-white/10 text-white placeholder-gray-200 "
             required
           />
 
           {/* Submit Button */}
           <button
             type="submit"
-            className="px-6 py-4 bg-white text-black font-semibold rounded-xl dark:bg-white/80 dark:text-black hover:scale-105 transition-transform duration-300 ease-in-out"
+            className="px-6 py-4 bg-white text-black font-semibold rounded-xl dark:bg-white/80 dark:text-black "
           >
             {result}
           </button>
