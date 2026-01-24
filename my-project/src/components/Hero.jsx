@@ -4,7 +4,7 @@ import {DownloadIcon,LinkedinIcon} from "lucide-react"
 const Hero = ({theme,settheme}) => {
   return (
     <div className='flex px-4 max-sm:w-screen max-sm:h-screen dark:text-text dark:bg-dark flex-col gap-4 justify-center items-center sm:px-12 lg:px-24 xl:px-40 py-20'>
-      <img className='w-36 rounded-full h-36 object-cover' src={assets.picportfolio} alt="" />
+      <img style={{width:"136px",height:"136px"}} className=' rounded-full  object-cover' loading='lazy' src={assets.picportfolio} alt="" />
       <p className='text-lg'>Hi i am AMJAD BASHIR</p>
       <h1 className='sm:text-4xl max-sm:text-center text-3xl  font-bold'> Senior Accounts & Finance Professional Based In Pakistan</h1>
       <p className='text-center'>I am a Senior Accounts & Finance Professional <br /> based in pakistan have a experience of 15+ years</p>

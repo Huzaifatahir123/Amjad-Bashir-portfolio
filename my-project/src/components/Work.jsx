@@ -1,6 +1,4 @@
-import React from "react";
-import { motion, easeInOut } from "framer-motion";
-import { parent1, fadeInUp } from "../animations/navanimation";
+
 import {
   Calculator,
   Wallet,
@@ -21,7 +19,7 @@ import {
 const skillsData = [
   {
     title: "Core Skills",
-    icon:Briefcase,
+    icon: Briefcase,
     items: [
       { icon: Calculator, label: "Financial Accounting & Reporting" },
       { icon: Wallet, label: "Accounts Payable & Receivable" },
@@ -37,7 +35,7 @@ const skillsData = [
   },
   {
     title: "Technical Skills",
-    icon:Settings,
+    icon: Settings,
     items: [
       { icon: Database, label: "QuickBooks Online & Desktop" },
       { icon: Database, label: "Oracle-based Accounting Software" },
@@ -51,10 +49,10 @@ const skillsData = [
 const Work = () => {
   return (
     <section id="skills">
-      <motion.div className="flex dark:bg-dark dark:text-white flex-col px-4 sm:px-12 lg:px-24 xl:px-40 py-20 gap-14">
+      <div className="flex dark:bg-dark dark:text-white flex-col px-4 sm:px-12 lg:px-24 xl:px-40 py-20 gap-14">
 
         {/* Header */}
-        <motion.div className="flex flex-col gap-4 justify-center items-center text-center">
+        <div className="flex flex-col gap-4 justify-center items-center text-center">
           <p className="text-sm tracking-widest text-secondary uppercase">
             Professional Expertise
           </p>
@@ -65,36 +63,25 @@ const Work = () => {
             A concise overview of my financial, accounting, and technical
             competencies built over 15+ years of professional experience.
           </p>
-        </motion.div>
+        </div>
 
         {/* Skills Cards */}
-        <motion.div
-          variants={parent1}
-          viewport={{ once: true, amount: 0.3 }}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ ease: easeInOut, duration: 0.6 }}
-          className="flex flex-wrap max-sm:flex-col gap-6 justify-center"
-        >
+        <div className="flex flex-wrap max-sm:flex-col gap-6 justify-center">
           {skillsData.map((skill, index) => (
-            <motion.div
+            <div
               key={index}
-              variants={fadeInUp}
               className="max-w-md flex-1 backdrop-blur-xl bg-dark dark:bg-white/10 
                          border border-white/20 rounded-2xl 
                          shadow-[0_8px_32px_rgba(0,0,0,0.2)]
                          p-6 sm:p-8 flex flex-col gap-5
                          hover:scale-[1.03] transition-all duration-300 ease-in-out"
             >
-              <div className="flex justify-between ">
+              <div className="flex justify-between">
                 <h2 className="text-2xl sm:text-3xl font-semibold text-white">
-                {skill.title}
-                
-              </h2>
-               <skill.icon className="text-white"/>
-
+                  {skill.title}
+                </h2>
+                <skill.icon className="text-white" />
               </div>
-              
 
               <ul className="flex flex-col gap-3">
                 {skill.items.map((item, i) => {
@@ -110,10 +97,10 @@ const Work = () => {
                   );
                 })}
               </ul>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </section>
   );
 };

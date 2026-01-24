@@ -7,5 +7,15 @@ export default defineConfig({
    server: {
     host: true, // makes it accessible via IP
     port: 5173 // optional, default is 5173
-  }
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'], // Separates core libraries
+          icons: ['lucide-react'],        // Separates icons
+        },
+      },
+    },
+  },
 })

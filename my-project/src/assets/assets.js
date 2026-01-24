@@ -1,6 +1,6 @@
 
 import Cv from "./AMJAD BASHIR CV.pdf"
-import picportfolio from "./Gemini_Generated_Image_ji8098ji8098ji80.png"
+import picportfolio from "./Gemini_Generated_Image_ji8098ji8098ji80 (1).jpg"
 import sun_icon from "./sun_icon.png"
 import moon_icon from "./moon_icon.png"
  const assets = {

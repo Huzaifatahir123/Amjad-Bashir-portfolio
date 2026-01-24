@@ -1,23 +1,15 @@
 import React from "react";
-import { motion, easeInOut } from "framer-motion";
-import { parent1, fadeInUp } from "../animations/navanimation";
 
 const About = () => {
   return (
     <section id="aboutus">
-      <motion.div
-        variants={parent1}
-        viewport={{ once: true }}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ ease: easeInOut, duration: 0.6 }}
+      <div
         className="flex px-4 flex-col dark:bg-dark 
-         dark:text-white 
+                   dark:text-white 
                    gap-14 sm:px-12 lg:px-24 xl:px-40 py-20"
       >
         {/* Header */}
-        <motion.div
-          variants={fadeInUp}
+        <div
           className="flex flex-col gap-3 justify-center items-center text-center"
         >
           <p className="text-sm tracking-widest uppercase text-secondary">
@@ -26,11 +18,10 @@ const About = () => {
           <h1 className="text-3xl sm:text-4xl font-bold text-secondary">
             About Me
           </h1>
-        </motion.div>
+        </div>
 
         {/* Content Card */}
-        <motion.div
-          variants={fadeInUp}
+        <div
           className="max-w-4xl mx-auto backdrop-blur-xl 
                       bg-dark dark:bg-white/10 text-white
                      border border-white/20
@@ -59,8 +50,8 @@ const About = () => {
             and deliver accurate financial insights to enable informed
             management decision-making.
           </p>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </section>
   );
 };
