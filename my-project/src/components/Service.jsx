@@ -1,6 +1,6 @@
 
 import assets from '../assets/assets';
-
+import {Link} from "lucide-react"
 const experiences = [
   {
     title: "Bookkeeper",
@@ -78,17 +78,8 @@ const Service = () => {
                   <li key={i}>{item}</li>
                 ))}
               </ul>
-              
-              <center className='mt-10'>
-                <a 
-                  target='_blank' 
-                  rel="noopener noreferrer"
-                  className='dark:hover:bg-black hover:bg-black hover:text-white dark:hover:text-white duration-200 bg-white px-4 py-1 rounded-4xl text-2xl' 
-                  href={exp.link}
-                >
-                  Visit
-                </a>
-              </center>
+      
+             
             </div>
           ))}
         </div>

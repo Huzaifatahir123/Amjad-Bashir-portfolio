@@ -1,8 +1,10 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 
 const About = () => {
   return (
-    <section id="aboutus">
+    <motion.section id="aboutus">
       <div
         className="flex px-4 flex-col dark:bg-dark 
                    dark:text-white 
@@ -21,7 +23,8 @@ const About = () => {
         </div>
 
         {/* Content Card */}
-        <div
+        <motion.div
+          
           className="max-w-4xl mx-auto 
                       bg-dark dark:bg-white/10 text-white
                      border border-white/20
@@ -29,30 +32,30 @@ const About = () => {
                      
                      px-6 sm:px-10 py-10"
         >
-          <p className="text-base sm:text-lg leading-relaxed dark:text-gray-100">
+          <motion.p  className="text-base sm:text-lg leading-relaxed dark:text-gray-100">
             Detail-oriented and results-driven{" "}
-            <span className="font-semibold text-white">
+            <motion.span className="font-semibold text-white">
               Accounts & Finance Professional
-            </span>{" "}
+            </motion.span>{" "}
             with over{" "}
-            <span className="font-semibold dark:text-white">15 years of experience</span>{" "}
+            <motion.span className="font-semibold dark:text-white">15 years of experience</motion.span>{" "}
             in accounting, budgeting, auditing, taxation, and financial reporting
             across multinational and local organizations.
             <br />
             <br />
             I bring strong expertise in{" "}
-            <span className="font-semibold dark:text-white">
+            <motion.span className="font-semibold dark:text-white">
               QuickBooks (Online & Desktop)
-            </span>
+            </motion.span>
             , Oracle-based accounting systems, and financial compliance under
             Pakistan tax laws. I have a proven ability to manage end-to-end
             finance operations, ensure regulatory compliance, support audits,
             and deliver accurate financial insights to enable informed
             management decision-making.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
