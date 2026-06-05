@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
-import {
-  Mail,
-  Linkedin,
-  MapPin,
-  Clock,
-  Send,
-} from "lucide-react";
+import { Mail, Linkedin, MapPin, Clock, Send } from "lucide-react";
 
 const ContactUs = () => {
   const [result, setResult] = useState("Send Message");
@@ -20,18 +14,12 @@ const ContactUs = () => {
 
       const formData = new FormData(event.target);
 
-      formData.append(
-        "access_key",
-        "68d98f9b-7b0d-4548-8981-337cecc09939"
-      );
+      formData.append("access_key", "68d98f9b-7b0d-4548-8981-337cecc09939");
 
-      const response = await fetch(
-        "https://api.web3forms.com/submit",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
       const data = await response.json();
 
@@ -79,9 +67,9 @@ const ContactUs = () => {
           </h2>
 
           <p className="mt-5 max-w-3xl mx-auto text-slate-600 dark:text-slate-300">
-            Whether you need bookkeeping, financial reporting,
-            budgeting support, compliance assistance, or
-            accounting consultation, feel free to reach out.
+            Whether you need bookkeeping, financial reporting, budgeting
+            support, compliance assistance, or accounting consultation, feel
+            free to reach out.
           </p>
         </motion.div>
 
@@ -101,17 +89,13 @@ const ContactUs = () => {
               dark:bg-white/5
             "
           >
-            <h3 className="text-2xl font-bold mb-8">
-              Contact Information
-            </h3>
+            <h3 className="text-2xl font-bold mb-8">Contact Information</h3>
 
             <div className="space-y-6">
               <div className="flex gap-4">
                 <Mail className="text-emerald-500 mt-1" />
                 <div>
-                  <h4 className="font-semibold">
-                    Email
-                  </h4>
+                  <h4 className="font-semibold">Email</h4>
                   <p className="text-slate-600 dark:text-slate-300">
                     Available through the contact form
                   </p>
@@ -121,9 +105,7 @@ const ContactUs = () => {
               <div className="flex gap-4">
                 <Linkedin className="text-emerald-500 mt-1" />
                 <div>
-                  <h4 className="font-semibold">
-                    LinkedIn
-                  </h4>
+                  <h4 className="font-semibold">LinkedIn</h4>
 
                   <a
                     href="https://www.linkedin.com/in/amjad-bashir-863571159"
@@ -139,22 +121,16 @@ const ContactUs = () => {
               <div className="flex gap-4">
                 <MapPin className="text-emerald-500 mt-1" />
                 <div>
-                  <h4 className="font-semibold">
-                    Location
-                  </h4>
+                  <h4 className="font-semibold">Location</h4>
 
-                  <p className="text-slate-600 dark:text-slate-300">
-                    Pakistan
-                  </p>
+                  <p className="text-slate-600 dark:text-slate-300">Pakistan</p>
                 </div>
               </div>
 
               <div className="flex gap-4">
                 <Clock className="text-emerald-500 mt-1" />
                 <div>
-                  <h4 className="font-semibold">
-                    Response Time
-                  </h4>
+                  <h4 className="font-semibold">Response Time</h4>
 
                   <p className="text-slate-600 dark:text-slate-300">
                     Typically within 24 hours
@@ -173,13 +149,10 @@ const ContactUs = () => {
                 p-6
               "
             >
-              <h4 className="font-semibold mb-2">
-                Professional Expertise
-              </h4>
+              <h4 className="font-semibold mb-2">Professional Expertise</h4>
 
               <p className="text-slate-600 dark:text-slate-300">
-                Financial Reporting • Budgeting •
-                QuickBooks • Tax Compliance •
+                Financial Reporting • Budgeting • QuickBooks • Tax Compliance •
                 Payroll • Accounting Operations
               </p>
             </div>
