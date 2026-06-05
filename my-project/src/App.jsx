@@ -25,7 +25,7 @@ const App = () => {
   }, [dark]);
 
   return (
-    <>
+    <div className="overflow-hidden">
       <Toaster />
       <Navbar theme={dark} settheme={setdark} />
       <Hero theme={dark} settheme={setdark} />
@@ -34,14 +34,14 @@ const App = () => {
           The fallback ensures the user sees something (or nothing) 
           while the JS for those sections downloads in the background.
       */}
-      <Suspense fallback={<div className="bg-white dark:bg-dark min-h-screen" />}>
+      <Suspense fallback={<div className="bg-white dark:bg-dark " />}>
         <About theme={dark} settheme={setdark} />
         <Service theme={dark} settheme={setdark} />
         <Work theme={dark} settheme={setdark} />
         <Contact theme={dark} settheme={setdark} />
         <Footer theme={dark} settheme={setdark} />
       </Suspense>
-    </>
+    </div>
   );
 };
 

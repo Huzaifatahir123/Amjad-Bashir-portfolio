@@ -1,27 +1,77 @@
-
+import React from "react";
+import { Linkedin, Mail, Download } from "lucide-react";
+import assets from "../assets/assets";
 
 const Footer = () => {
   return (
-    <div className='flex dark:bg-dark dark:text-white flex-col gap-4 sm:px-12 px-4 lg:px-24 xl:px-40 pt-10'>
-      <div className='p-4 gap-4 rounded-t-2xl w-full flex flex-col bg-secondary'>
-        <div className='flex justify-between items-center'>
-          <h1 className='text-3xl dark:text-white max-sm:text-sm font-bold text-black'>
-            Amjad<span className='text-red-500 text-3xl'>.</span>
-          </h1>
-          <h1 className='text-xl max-sm:text-sm font-sm dark:text-white text-black'>
-            amjadbashirrose@gmail.com
-          </h1>
-        </div>
-
-        <div className='w-full h-[1px] dark:bg-white bg-black'></div>
+    <footer className="dark:bg-dark dark:text-white pt-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
         
-        <div className='flex justify-between dark:text-white gap-2 text-black items-center'>
-          <p className='text-sm dark:text-white'>© 2025 Amjad All Rights Reserved.</p>
-          <p className='text-sm text-black dark:text-white'>Privacy Policy</p>
+        {/* Main Box */}
+        <div className="
+          rounded-t-3xl
+          border border-slate-200 dark:border-white/10
+          bg-slate-50 dark:bg-white/5
+          p-6 sm:p-10
+        ">
+          
+          {/* Top */}
+          <div className="flex flex-col gap-6">
+            
+            {/* Name + Role */}
+            <div>
+              <h2 className="text-2xl font-bold">
+                Amjad<span className="text-emerald-500">.</span>
+              </h2>
+
+              <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                Senior Accounts & Finance Professional • 15+ Years Experience
+              </p>
+            </div>
+
+            {/* Contact Row */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+              
+              <a
+                href="mailto:amjadbashirrose@gmail.com"
+                className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300 hover:text-emerald-500"
+              >
+                <Mail className="w-4 h-4" />
+                Email
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/amjad-bashir-863571159"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300 hover:text-emerald-500"
+              >
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
+              </a>
+
+              <a
+                href={assets.Cv}
+                download="AMJAD BASHIR CV.pdf"
+                className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300 hover:text-emerald-500"
+              >
+                <Download className="w-4 h-4" />
+                CV
+              </a>
+            </div>
+
+            {/* Bottom line */}
+            <div className="border-t border-slate-200 dark:border-white/10 pt-4">
+              <p className="text-xs text-slate-500 dark:text-slate-400 text-center sm:text-left">
+                © 2026 Amjad Bashir • Financial Accounting, Reporting & Compliance
+              </p>
+            </div>
+
+          </div>
         </div>
       </div>
-    </div>
-  )
-}
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

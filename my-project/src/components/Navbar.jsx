@@ -14,102 +14,222 @@ const Navbar = ({ theme, settheme }) => {
 
   return (
     <>
-      {/* ================= NAVBAR ================= */}
-      <div
-        className="flex justify-between items-center
-                   px-4 sm:px-6 lg:px-24 xl:px-40 py-5
-                   dark:bg-dark dark:text-gray-100"
-      >
-        {/* Logo */}
-        <h1 className="text-3xl font-black">
-          Amjad<span className="text-secondary">.</span>
-        </h1>
-
-        {/* Desktop Navigation */}
+      {/* NAVBAR */}
+      <header className="sticky top-0 z-50">
         <div
-          className="hidden sm:flex backdrop-blur-xl
-                     bg-white/80 dark:bg-white/15
-                     border border-gray-200 dark:border-white/20
-                     rounded-2xl px-8 py-3 shadow-lg"
+          className="
+            backdrop-blur-xl
+            bg-white/70 dark:bg-slate-950/70
+            border-b border-slate-200/70 dark:border-white/10
+          "
         >
-          <div className="flex items-center gap-8">
-            {navLinks.map((link, i) => (
-              <a
-                key={i}
-                href={link.href}
-                className="relative text-sm lg:text-base font-medium cursor-pointer
-                           after:content-[''] after:absolute after:left-0 after:-bottom-1
-                           after:h-[2px] after:w-0
-                           after:bg-dark dark:after:bg-white
-                           after:transition-all after:duration-300
-                           hover:after:w-full"
+          <div
+            className="
+              max-w-7xl mx-auto
+              px-6 lg:px-10
+              h-20
+              flex items-center justify-between
+            "
+          >
+            {/* Logo */}
+            <a href="/" className="group">
+              <h1
+                className="
+                  text-3xl
+                  font-extrabold
+                  tracking-tight
+                  text-slate-900 dark:text-white
+                "
               >
-                {link.label}
+                Amjad
+                <span
+                  className="
+                    text-emerald-500
+                    group-hover:text-emerald-400
+                    transition-colors
+                  "
+                >
+                  .
+                </span>
+              </h1>
+            </a>
+
+            {/* Desktop Nav */}
+            <nav
+              className="
+                hidden md:flex
+                items-center gap-10
+              "
+            >
+              {navLinks.map((link, i) => (
+                <a
+                  key={i}
+                  href={link.href}
+                  className="
+                    relative
+                    text-sm
+                    font-medium
+                    text-slate-700
+                    dark:text-slate-300
+                    transition-all
+                    duration-300
+                    hover:text-emerald-600
+                    dark:hover:text-emerald-400
+
+                    after:absolute
+                    after:left-0
+                    after:-bottom-2
+                    after:h-[2px]
+                    after:w-0
+                    after:bg-emerald-500
+                    after:transition-all
+                    after:duration-300
+
+                    hover:after:w-full
+                  "
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+
+            {/* Right Actions */}
+            <div className="flex items-center gap-4">
+              {/* Theme Toggle */}
+              <button
+                onClick={() => settheme((prev) => !prev)}
+                className="
+                  w-11 h-11
+                  rounded-xl
+                  border border-slate-200
+                  dark:border-white/10
+                  flex items-center justify-center
+                  hover:bg-slate-100
+                  dark:hover:bg-white/5
+                  transition-all
+                "
+              >
+                <img
+                  src={theme ? assets.sun_icon : assets.moon_icon}
+                  alt="theme"
+                  className="w-5"
+                />
+              </button>
+
+              {/* CTA */}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/amjad-bashir-863571159"
+                className="
+                  hidden md:flex
+                  items-center
+                  px-6 py-3
+                  rounded-xl
+
+                  bg-emerald-600
+                  text-white
+                  font-medium
+
+                  hover:bg-emerald-500
+                  hover:-translate-y-0.5
+
+                  shadow-lg
+                  shadow-emerald-500/20
+
+                  transition-all
+                  duration-300
+                "
+              >
+                Schedule a Call
               </a>
-            ))}
+
+              {/* Mobile Menu */}
+              <button
+                onClick={() => setside(true)}
+                className="
+                  md:hidden
+                  w-11 h-11
+                  rounded-xl
+                  border border-slate-200
+                  dark:border-white/10
+                  flex items-center justify-center
+                "
+              >
+                <Menu className="w-5 h-5" />
+              </button>
+            </div>
           </div>
         </div>
+      </header>
 
-        {/* Right Actions */}
-        <div className="flex items-center gap-4">
-          {/* Theme Toggle */}
-          <img
-            src={theme ? assets.sun_icon : assets.moon_icon}
-            alt="theme toggle"
-            className="w-8 cursor-pointer"
-            onClick={() => settheme((prev) => !prev)}
-          />
+      {/* MOBILE MENU */}
+      <div
+        className={`
+          fixed top-0 right-0 h-screen w-[80%]
+          bg-white dark:bg-slate-950
+          z-[999]
+          transition-all duration-500
+          border-l border-slate-200 dark:border-white/10
 
-          {/* Connect Button */}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/amjad-bashir-863571159"
-            className="hidden sm:block px-6 py-2 rounded-xl text-sm lg:text-base
-                       border border-gray-300 dark:border-white/30
-                       text-gray-800 dark:text-gray-100
-                       hover:bg-black hover:text-white
-                       dark:hover:bg-white/20 dark:hover:text-white
-                       transition-all duration-300"
-          >
-            Connect
-          </a>
-
-          {/* Mobile Menu Icon */}
-          <Menu
-            onClick={() => setside(true)}
-            className="w-8 sm:hidden cursor-pointer"
-            alt="menu"
-          />
+          ${side ? "translate-x-0" : "translate-x-full"}
+        `}
+      >
+        <div className="p-6 flex justify-end">
+          <button onClick={() => setside(false)}>
+            <X className="w-7 h-7" />
+          </button>
         </div>
-      </div>
 
-      {/* ================= MOBILE MENU ================= */}
-      {side && (
-        <div
-          className="fixed inset-0 z-50 sm:hidden
-                     backdrop-blur-xl bg-white/90 dark:bg-dark/90
-                     flex flex-col justify-center items-center gap-6
-                     text-gray-800 dark:text-gray-100"
-        >
-          {/* Close */}
-          <X
-            onClick={() => setside(false)}
-            className="absolute top-6 right-6 w-8 cursor-pointer"
-            alt="close"
-          />
-
+        <div className="flex flex-col px-8 pt-10 gap-8">
           {navLinks.map((link, i) => (
             <a
               key={i}
-              onClick={() => setside(false)}
               href={link.href}
-              className="text-lg font-medium"
+              onClick={() => setside(false)}
+              className="
+                text-lg
+                font-medium
+                text-slate-700
+                dark:text-slate-300
+                hover:text-emerald-600
+                transition-colors
+              "
             >
               {link.label}
             </a>
           ))}
+
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/amjad-bashir-863571159"
+            className="
+              mt-4
+              bg-emerald-600
+              text-white
+              px-5 py-3
+              rounded-xl
+              text-center
+              font-medium
+            "
+          >
+            Schedule a Call
+          </a>
         </div>
+      </div>
+
+      {/* Overlay */}
+      {side && (
+        <div
+          onClick={() => setside(false)}
+          className="
+            fixed inset-0
+            bg-black/40
+            backdrop-blur-sm
+            z-[998]
+          "
+        />
       )}
     </>
   );

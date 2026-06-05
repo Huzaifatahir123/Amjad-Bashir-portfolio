@@ -1,20 +1,46 @@
 @import "tailwindcss";
+
 @custom-variant dark {
   &:where(.dark, .dark *) {
     @slot;
   }
 };
-@theme {
-  --color-primary: #242424;
-  --color-dark: #11001F;
-  --color-text: #F3F3F3;
 
-  --font-grotesk: "Space Grotesk", ;
-  --font-manrope: "Manrope", ;
+@theme {
+  /* Brand Colors */
+  --color-primary: #0F172A;      /* Deep Navy */
+  --color-secondary: #10B981;    /* Emerald */
+  --color-accent: #34D399;
+
+  /* Backgrounds */
+  --color-light-bg: #F8FAFC;
+  --color-dark: #020617;
+
+  /* Text */
+  --color-text: #1E293B;
+  --color-text-light: #64748B;
+  --color-text-dark: #F8FAFC;
+
+  /* Fonts */
+  --font-heading: "Space Grotesk";
+  --font-body: "Manrope";
 }
-body {
-  font-family: "Space Grotesk", sans-serif;
-}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background: var(--color-light-bg);
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", sans-serif;
 }

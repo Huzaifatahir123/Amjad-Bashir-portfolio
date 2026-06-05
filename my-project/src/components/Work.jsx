@@ -1,4 +1,5 @@
-
+import React from "react";
+import { motion } from "framer-motion";
 import {
   Calculator,
   Wallet,
@@ -12,94 +13,220 @@ import {
   FileSpreadsheet,
   Laptop,
   Mail,
-  Briefcase,
-  Settings
 } from "lucide-react";
 
-const skillsData = [
+const expertiseAreas = [
   {
-    title: "Core Skills",
-    icon: Briefcase,
-    items: [
-      { icon: Calculator, label: "Financial Accounting & Reporting" },
-      { icon: Wallet, label: "Accounts Payable & Receivable" },
-      { icon: FileText, label: "Bank & Supplier Reconciliation" },
-      { icon: BarChart3, label: "Budgeting & Forecasting" },
-      { icon: Layers, label: "Payroll Processing" },
-      { icon: ShieldCheck, label: "Taxation (Income, Sales & Withholding)" },
-      { icon: CheckCircle, label: "Audit Coordination & Compliance" },
-      { icon: Database, label: "General Ledger Management" },
-      { icon: PieChart, label: "Financial Analysis" },
-      { icon: CheckCircle, label: "Internal Controls" },
+    title: "Accounting & Reporting",
+    icon: Calculator,
+    skills: [
+      "Financial Accounting",
+      "Financial Reporting",
+      "General Ledger Management",
+      "Accounts Payable & Receivable",
     ],
   },
   {
-    title: "Technical Skills",
-    icon: Settings,
-    items: [
-      { icon: Database, label: "QuickBooks Online & Desktop" },
-      { icon: Database, label: "Oracle-based Accounting Software" },
-      { icon: FileSpreadsheet, label: "Microsoft Excel (Advanced)" },
-      { icon: Laptop, label: "Word, PowerPoint & Google Sheets" },
-      { icon: Mail, label: "Internet & Email Communication" },
+    title: "Financial Operations",
+    icon: Wallet,
+    skills: [
+      "Bank Reconciliation",
+      "Supplier Reconciliation",
+      "Payroll Processing",
+      "Cash Flow Management",
+    ],
+  },
+  {
+    title: "Budgeting & Analysis",
+    icon: BarChart3,
+    skills: [
+      "Budget Planning",
+      "Forecasting",
+      "Financial Analysis",
+      "Management Reporting",
+    ],
+  },
+  {
+    title: "Tax & Compliance",
+    icon: ShieldCheck,
+    skills: [
+      "Income Tax",
+      "Sales Tax",
+      "Withholding Tax",
+      "Audit Coordination",
+    ],
+  },
+  {
+    title: "Accounting Systems",
+    icon: Database,
+    skills: [
+      "QuickBooks Online",
+      "QuickBooks Desktop",
+      "Oracle ERP",
+      "Database Reporting",
+    ],
+  },
+  {
+    title: "Productivity Tools",
+    icon: FileSpreadsheet,
+    skills: [
+      "Advanced Excel",
+      "PowerPoint",
+      "Google Sheets",
+      "Business Communication",
     ],
   },
 ];
 
 const Work = () => {
   return (
-    <section id="skills">
-      <div className="flex dark:bg-dark dark:text-white flex-col px-4 sm:px-12 lg:px-24 xl:px-40 py-20 gap-14">
-
+    <section
+      id="skills"
+      className="py-28 dark:bg-dark dark:text-white"
+    >
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        
         {/* Header */}
-        <div className="flex flex-col gap-4 justify-center items-center text-center">
-          <p className="text-sm tracking-widest text-secondary uppercase">
-            Professional Expertise
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20"
+        >
+          <p className="uppercase tracking-[0.3em] text-emerald-500 text-sm font-medium">
+            Core Expertise
           </p>
-          <h1 className="text-3xl sm:text-4xl font-bold text-secondary">
-            Core & Technical Skills
-          </h1>
-          <p className="text-sm sm:text-base text-secondary max-w-xl">
-            A concise overview of my financial, accounting, and technical
-            competencies built over 15+ years of professional experience.
+
+          <h2 className="mt-4 text-4xl lg:text-5xl font-bold">
+            Professional Capabilities
+          </h2>
+
+          <p className="mt-5 max-w-3xl mx-auto text-slate-600 dark:text-slate-300">
+            A comprehensive blend of financial management,
+            accounting operations, compliance, reporting,
+            and technology expertise developed over 15+
+            years of professional experience.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Skills Cards */}
-        <div className="flex flex-wrap max-sm:flex-col gap-6 justify-center">
-          {skillsData.map((skill, index) => (
-            <div
-              key={index}
-              className="max-w-md flex-1  bg-dark dark:bg-white/10 
-                         border border-white/20 rounded-2xl 
-                         
-                         p-6 sm:p-8 flex flex-col gap-5
-                        "
-            >
-              <div className="flex justify-between">
-                <h2 className="text-2xl sm:text-3xl font-semibold text-white">
-                  {skill.title}
-                </h2>
-                <skill.icon className="text-white" />
-              </div>
+        {/* Skills Grid */}
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          {expertiseAreas.map((area, index) => {
+            const Icon = area.icon;
 
-              <ul className="flex flex-col gap-3">
-                {skill.items.map((item, i) => {
-                  const Icon = item.icon;
-                  return (
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.08,
+                }}
+                className="
+                  group
+                  rounded-3xl
+                  border
+                  border-slate-200
+                  dark:border-white/10
+
+                  bg-white
+                  dark:bg-white/5
+
+                  p-8
+
+                  hover:-translate-y-2
+                  hover:shadow-2xl
+
+                  transition-all
+                  duration-300
+                "
+              >
+                {/* Icon */}
+                <div
+                  className="
+                    w-14
+                    h-14
+                    rounded-2xl
+
+                    bg-emerald-50
+                    dark:bg-emerald-500/10
+
+                    flex
+                    items-center
+                    justify-center
+
+                    mb-6
+                  "
+                >
+                  <Icon className="w-7 h-7 text-emerald-500" />
+                </div>
+
+                {/* Title */}
+                <h3 className="text-2xl font-semibold mb-6">
+                  {area.title}
+                </h3>
+
+                {/* Skills */}
+                <ul className="space-y-3">
+                  {area.skills.map((skill, i) => (
                     <li
                       key={i}
-                      className="flex items-center gap-3 text-sm sm:text-base text-gray-100"
+                      className="
+                        flex
+                        items-center
+                        gap-3
+
+                        text-slate-600
+                        dark:text-slate-300
+                      "
                     >
-                      <Icon className="w-5 h-5 text-secondary shrink-0" />
-                      <span>{item.label}</span>
+                      <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
+                      <span>{skill}</span>
                     </li>
-                  );
-                })}
-              </ul>
-            </div>
-          ))}
+                  ))}
+                </ul>
+              </motion.div>
+            );
+          })}
         </div>
+
+        {/* Bottom Summary */}
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="
+            mt-20
+
+            rounded-3xl
+            border
+            border-slate-200
+            dark:border-white/10
+
+            p-10
+
+            text-center
+
+            bg-gradient-to-r
+            from-emerald-500/10
+            to-transparent
+          "
+        >
+          <h3 className="text-2xl font-bold">
+            Financial Expertise Backed by Technology
+          </h3>
+
+          <p className="mt-4 max-w-3xl mx-auto text-slate-600 dark:text-slate-300">
+            Combining strong accounting principles, financial
+            management expertise, regulatory compliance knowledge,
+            and modern accounting software to support business
+            growth and informed decision-making.
+          </p>
+        </motion.div>
       </div>
     </section>
   );
