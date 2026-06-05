@@ -84,7 +84,8 @@ const Hero = () => {
                 target="_blank"
                 rel="noreferrer"
                 className="
-                bg-emerald-600
+                
+                bg-accent
                 hover:bg-emerald-500
                 text-white
                 px-6 py-3

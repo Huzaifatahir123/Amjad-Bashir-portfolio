@@ -13,7 +13,7 @@ const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/footer'));
 
 const App = () => {
-  const [dark, setdark] = useState(true);
+  const [dark, setdark] = useState(false);
 
   useEffect(() => {
     const root = document.documentElement;
