@@ -112,7 +112,7 @@ const Navbar = ({ theme, settheme }) => {
                 <img
                   src={theme ? assets.sun_icon : assets.moon_icon}
                   alt="theme"
-                  className="w-5"
+                  className="w-5 h-5"
                 />
               </button>
 

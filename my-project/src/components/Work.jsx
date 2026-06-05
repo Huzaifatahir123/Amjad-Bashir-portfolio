@@ -118,12 +118,13 @@ const Work = () => {
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ x: -25 }}
+                whileInView={{ x: 0 }}
                 viewport={{ once: true }}
                 transition={{
                   duration: 0.5,
                   delay: index * 0.08,
+                  ease: "easeInOut",
                 }}
                 className="
                   group
