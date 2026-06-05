@@ -62,7 +62,7 @@ const ContactUs = () => {
         dark:text-white
       "
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="flex  flex-col lg:flex-row items-center mx-auto px-6 lg:px-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
