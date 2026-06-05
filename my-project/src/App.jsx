@@ -9,7 +9,7 @@ import Hero from './components/Hero';
 const About = lazy(() => import('./components/About'));
 const Service = lazy(() => import('./components/Service'));
 const Work = lazy(() => import('./components/Work'));
-const Contact = lazy(() => import('./components/Contact'));
+const Contact = lazy(() => import('./components/ContactUs'));
 const Footer = lazy(() => import('./components/footer'));
 
 const App = () => {
